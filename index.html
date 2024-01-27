@@ -3,11 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fernando Barrientos</title>
+    <title>Mi Portfolio</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .proyecto {
+            width: calc(33% - 20px);
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .proyecto img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Estilos para dispositivos móviles */
+        @media (max-width: 600px) {
+            .galeria {
+                flex-direction: column;
+            }
+
+            .proyecto {
+                width: calc(100% - 20px);
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Portafolio</h1>
-    <p>Fernando Barrientos</p>
-    <p>Ingeniero informático</p>
+    <header>
+        <h1>Bienvenido a mi Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="habilidades">
+        <h2>Habilidades</h2>
+        <p>HTML, CSS, JavaScript, React, Node.js</p>
+    </section>
+    
+    <section id="proyectos">
+        <h2>Proyectos</h2>
+        <div class="galeria">
+            <div class="proyecto">
+                <img src="proyecto1.jpg" alt="Proyecto 1">
+                <p>Descripción del Proyecto 1.</p>
+            </div>
+            <!-- Repite el div de proyecto para cada proyecto que quieras mostrar -->
+        </div>
+    </section>
+    
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Te gustaría trabajar conmigo? ¡Estupendo!</p>
+        <p>Email: tu-email@example.com</p>
+    </section>
+    
+    <footer>
+        <p>© 2024 Mi Portfolio</p>
+    </footer>
 </body>
 </html>
