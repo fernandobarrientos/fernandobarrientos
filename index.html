@@ -1,123 +1,421 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portfolio</title>
+<header class="container-fluid">
+	<div class="row">
+		<div class="container py-5 text-white">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1 class="display-4 text-uppercase font-weight-bold">Your favorite one page multipurpose template</h1>
+					<p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias impedit harum cum aliquid quae sit?</p>
+					<a href="#features" class="btn btn-danger rounded-0 my-5">Find out more</a>
+				</div>
+			</div>
+		</div>
+	</div>
     <style>
-        /* Estilos generales */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+            /* General Styles */
+.btn {
+    padding: 0.75rem 2rem;
+}
 
-        header {
-            background: #333;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-        }
+.btn.btn-with-icon {
+    margin: 0 0.2rem;
+    padding: 0.5rem;
+    width: 40px;
+}
 
-        header h1 {
-            margin: 0;
-        }
+/* Navbar */
+.navbar-container {
+    background-color: #292c47;
+}
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
+.navbar {
+    border: none !important;
+}
 
-        nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
+.navbar-brand img {
+    height: 20px;
+}
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
+.navbar-toggler {
+    background-color: #dc3545;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+}
 
-        section {
-            padding: 20px;
-            margin: 20px 0;
-        }
+.navbar-light .navbar-nav .nav-link {
+    color: #bbb;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
 
-        .galeria {
-            display: flex;
-            flex-wrap: wrap;
-        }
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #fff;
+}
 
-        .proyecto {
-            width: calc(33% - 20px);
-            margin: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+/* Header */
+header {
+    background-image: url('https://pixelbuddha.net/livepreview/activebox/images/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 10rem;
+}
 
-        .proyecto img {
-            max-width: 100%;
-            height: auto;
-        }
+/* Projects */
+.project-container {
+    overflow: hidden;
+}
 
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 20px;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
+.project {
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    min-height: 300px;
+    transition: transform 0.4s ease-in-out;
+}
 
-        /* Estilos para dispositivos móviles */
-        @media (max-width: 600px) {
-            .galeria {
-                flex-direction: column;
-            }
+.project:hover {
+    transform: scale(1.2);
+}
 
-            .proyecto {
-                width: calc(100% - 20px);
-            }
-        }
+.project .overlay {
+    align-items: center;
+    background-color: #dc3545;
+    color: white;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    transition: opacity 0.4s ease-in-out;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.project:hover .overlay {
+    opacity: 0.9;
+}
+
+.pre-footer {
+    background-color: #333659;
+}
+
+footer {
+    background-color: #2b2e4a;
+}
+
+footer .text-muted,
+.pre-footer .text-muted {
+    color: #bbb !important;
+}
+
+footer p,
+.pre-footer p {
+    margin: 0;
+}
+
     </style>
-</head>
-<body>
-    <header>
-        <h1>Bienvenido a mi Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="habilidades">
-        <h2>Habilidades</h2>
-        <p>HTML, CSS, JavaScript, React, Node.js</p>
-    </section>
-    
-    <section id="proyectos">
-        <h2>Proyectowwwws</h2>
-        <div class="galeria">
-            <div class="proyecto">
-                <img src="https://precarga.cl/wp-content/uploads/2023/04/Logo-Transparency-1.png" alt="Proyecto 1">
-                <p>Descripción del Proyecto 1.</p>
-            </div>
-            <!-- Repite el div de proyecto para cada proyecto que quieras mostrar -->
-        </div>
-    </section>
-    
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>¿Te gustaría trabajar conmigo? ¡Estupendo!</p>
-        <p>Email: tu-email@example.com</p>
-    </section>
-    
-    <footer>
-        <p>© 2024 Mi Portfolio</p>
-    </footer>
-</body>
-</html>
+</header>
+
+<div class="container-fluid navbar-container fixed-top">
+	<div class="row">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-light border-bottom py-2">
+				<a class="navbar-brand" href="#">
+					<img class="img-fluid" src="https://pixelbuddha.net/livepreview/activebox/images/logo.png" alt="logo" />
+				</a>
+				<button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+						aria-expanded="false" aria-label="Toggle navigation">
+					<i class="fas fa-bars"></i>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbar">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item text-center">
+							<a class="nav-link" href="#features">Features</a>
+						</li>
+						<li class="nav-item text-center">
+							<a class="nav-link" href="#work">Work</a>
+						</li>
+						<li class="nav-item text-center">
+							<a class="nav-link" href="#team">Team</a>
+						</li>
+						<li class="nav-item text-center">
+							<a class="nav-link" href="#download">Download</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+</div>
+
+<div class="container text-center py-5" id="features">
+	<div class="row">
+		<div class="col-lg-4 col-md-6">
+			<i class="fas text-danger fa-pencil-alt fa-3x py-4"></i>
+			<h6 class="text-uppercase">Easily customised</h6>
+			<p class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis beatae quae dolores ratione omnis recusandae
+				voluptatum nihil ipsa quas repellat!</p>
+		</div>
+		<div class="col-lg-4 col-md-6">
+			<i class="fas text-danger fa-desktop fa-3x py-4"></i>
+			<h6 class="text-uppercase">Responsive Ready</h6>
+			<p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur quisquam modi culpa, illum a reiciendis
+				libero cupiditate aliquam voluptatibus id!</p>
+		</div>
+		<div class="col-lg-4 col-md-6">
+			<i class="fas text-danger fa-lightbulb fa-3x py-4"></i>
+			<h6 class="text-uppercase">Modern Design</h6>
+			<p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur quisquam modi culpa, illum a reiciendis
+				libero cupiditate aliquam voluptatibus id!</p>
+		</div>
+		<div class="col-lg-4 col-md-6">
+			<i class="fas text-danger fa-code fa-3x py-4"></i>
+			<h6 class="text-uppercase">Clean Code</h6>
+			<p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur quisquam modi culpa, illum a reiciendis
+				libero cupiditate aliquam voluptatibus id!</p>
+		</div>
+		<div class="col-lg-4 col-md-6">
+			<i class="fas text-danger fa-shipping-fast fa-3x py-4"></i>
+			<h6 class="text-uppercase">Ready to ship</h6>
+			<p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur quisquam modi culpa, illum a reiciendis
+				libero cupiditate aliquam voluptatibus id!</p>
+		</div>
+		<div class="col-lg-4 col-md-6">
+			<i class="fas text-danger fa-download fa fa-3x py-4"></i>
+			<h6 class="text-uppercase">Download for free</h6>
+			<p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur quisquam modi culpa, illum a reiciendis
+				libero cupiditate aliquam voluptatibus id!</p>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid px-0 py5 text-center" id="work">
+	<div class="row no-gutters">
+		<div class="col-lg-3 col-6 project-container">
+			<div class="project" style="background-image: url('https://pixelbuddha.net/livepreview/activebox/images/work-1.jpg')">
+				<div class="overlay">
+					<h6 class="text-uppercase">
+						<a href="#" class="text-white">Project Name</a>
+					</h6>
+					<p>Project description</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-3 col-6 project-container">
+			<div class="project" style="background-image: url('https://pixelbuddha.net/livepreview/activebox/images/work-2.jpg')">
+				<div class="overlay">
+					<h6 class="text-uppercase">
+						<a href="#" class="text-white">Project Name</a>
+					</h6>
+					<p>Project description</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-3 col-6 project-container">
+			<div class="project" style="background-image: url('https://pixelbuddha.net/livepreview/activebox/images/work-3.jpg')">
+				<div class="overlay">
+					<h6 class="text-uppercase">
+						<a href="#" class="text-white">Project Name</a>
+					</h6>
+					<p>Project description</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-3 col-6 project-container">
+			<div class="project" style="background-image: url('https://pixelbuddha.net/livepreview/activebox/images/work-4.jpg')">
+				<div class="overlay">
+					<h6 class="text-uppercase">
+						<a href="#" class="text-white">Project Name</a>
+					</h6>
+					<p>Project description</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-3 col-6 project-container">
+			<div class="project" style="background-image: url('https://pixelbuddha.net/livepreview/activebox/images/work-5.jpg')">
+				<div class="overlay">
+					<h6 class="text-uppercase">
+						<a href="#" class="text-white">Project Name</a>
+					</h6>
+					<p>Project description</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-3 col-6 project-container">
+			<div class="project" style="background-image: url('https://pixelbuddha.net/livepreview/activebox/images/work-6.jpg')">
+				<div class="overlay">
+					<h6 class="text-uppercase">
+						<a href="#" class="text-white">Project Name</a>
+					</h6>
+					<p>Project description</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-3 col-6 project-container">
+			<div class="project" style="background-image: url('https://pixelbuddha.net/livepreview/activebox/images/work-7.jpg')">
+				<div class="overlay">
+					<h6 class="text-uppercase">Project Name</h6>
+					<p>Project description</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-3 col-6 project-container">
+			<div class="project" style="background-image: url('https://pixelbuddha.net/livepreview/activebox/images/work-8.jpg')">
+				<div class="overlay">
+					<h6 class="text-uppercase">Project Name</h6>
+					<p>Project description</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container py-5 text-lg-left text-center" id="team">
+	<div class="row">
+		<div class="col-lg-3 col-md-6 my-3">
+			<img class="img-fluid mx-auto d-block mb-3" src="https://pixelbuddha.net/livepreview/activebox/images/team-1.jpg" alt="team 1" />
+			<h4>Ruth Wood</h4>
+			<h6 class="text-uppercase text-danger mb-4">Founder, CEO</h6>
+			<p class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam laboriosam velit dolores explicabo eos corrupti
+				placeat neque quos repellat alias.</p>
+			<a href="#" class="btn btn-with-icon btn-outline-secondary rounded-0">
+				<i class="fab fa-facebook-f"></i>
+			</a href="#">
+			<a href="#" class="btn btn-with-icon btn-outline-secondary rounded-0">
+				<i class="fab fa-twitter"></i>
+			</a href="#">
+			<a href="#" class="btn btn-with-icon btn-outline-secondary rounded-0">
+				<i class="fab fa-linkedin-in"></i>
+			</a href="#">
+			<a href="#" class="btn btn-with-icon btn-outline-secondary rounded-0">
+				<i class="fab fa-google"></i>
+			</a href="#">
+		</div>
+		<div class="col-lg-3 col-md-6 my-3">
+			<img class="img-fluid mx-auto d-block mb-3" src="https://pixelbuddha.net/livepreview/activebox/images/team-2.jpg" alt="team 2" />
+			<h4>Timothy Reed</h4>
+			<h6 class="text-uppercase text-danger mb-4">Co-Founder, Dev</h6>
+			<p class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam laboriosam velit dolores explicabo eos corrupti
+				placeat neque quos repellat alias.</p>
+			<a href="#" class="btn btn-with-icon btn-outline-secondary rounded-0">
+				<i class="fab fa-facebook-f"></i>
+			</a href="#">
+			<a href="#" class="btn btn-with-icon btn-outline-secondary rounded-0">
+				<i class="fab fa-twitter"></i>
+			</a href="#">
+			<a href="#" class="btn btn-with-icon btn-outline-secondary rounded-0">
+				<i class="fab fa-linkedin-in"></i>
+			</a href="#">
+			<a href="#" class="btn btn-with-icon btn-outline-secondary rounded-0">
+				<i class="fab fa-google"></i>
+			</a href="#">
+		</div>
+		<div class="col-lg-3 col-md-6 my-3">
+			<img class="img-fluid mx-auto d-block mb-3" src="https://pixelbuddha.net/livepreview/activebox/images/team-3.jpg" alt="team 3" />
+			<h4>Victoria Valdez</h4>
+			<h6 class="text-uppercase text-danger mb-4">UI Designer</h6>
+			<p class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam laboriosam velit dolores explicabo eos corrupti
+				placeat neque quos repellat alias.</p>
+			<a href="#" class="btn btn-with-icon btn-outline-secondary rounded-0">
+				<i class="fab fa-facebook-f"></i>
+			</a href="#">
+			<a href="#" class="btn btn-with-icon btn-outline-secondary rounded-0">
+				<i class="fab fa-twitter"></i>
+			</a href="#">
+			<a href="#" class="btn btn-with-icon btn-outline-secondary rounded-0">
+				<i class="fab fa-linkedin-in"></i>
+			</a href="#">
+			<a href="#" class="btn btn-with-icon btn-outline-secondary rounded-0">
+				<i class="fab fa-google"></i>
+			</a href="#">
+		</div>
+		<div class="col-lg-3 col-md-6 my-3">
+			<img class="img-fluid mx-auto d-block mb-3" src="https://pixelbuddha.net/livepreview/activebox/images/team-4.jpg" alt="team 4" />
+			<h4>Baverly Little</h4>
+			<h6 class="text-uppercase text-danger mb-4">Data Scientist</h6>
+			<p class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam laboriosam velit dolores explicabo eos corrupti
+				placeat neque quos repellat alias.</p>
+			<a href="#" class="btn btn-with-icon btn-outline-secondary rounded-0">
+				<i class="fab fa-facebook-f"></i>
+			</a href="#">
+			<a href="#" class="btn btn-with-icon btn-outline-secondary rounded-0">
+				<i class="fab fa-twitter"></i>
+			</a href="#">
+			<a href="#" class="btn btn-with-icon btn-outline-secondary rounded-0">
+				<i class="fab fa-linkedin-in"></i>
+			</a href="#">
+			<a href="#" class="btn btn-with-icon btn-outline-secondary rounded-0">
+				<i class="fab fa-google"></i>
+			</a href="#">
+		</div>
+	</div>
+</div>
+
+<div class="container py-5" id="download">
+	<div class="row justify-content-center">
+		<div class="col-lg-8 col-10 text-center">
+			<h2 class="font-weight-light text-capitalize">Are you ready to start? Download now for free!</h2>
+			<h6 class="font-weight-bold text-uppercase">Lorem ipsum dolor sit amet consectetur</h6>
+			<button class="btn btn-danger mt-4 text-uppercase rounded-0">Download for free</button>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid text-center py-5 pre-footer text-white">
+	<div class="row">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<h6 class="text-uppercase mb-3 mt-4 mt-md-0">Location</h6>
+					<p class="text-muted">3481 Melrose Place
+						<br/> Beverly Hills, CA 90210</p>
+				</div>
+				<div class="col-md-4">
+					<h6 class="text-uppercase mb-3 mt-4 mt-md-0">Share With Love</h6>
+					<a href="#" class="btn btn-with-icon btn-outline-light rounded-0">
+						<i class="fab fa-facebook-f"></i>
+					</a href="#">
+					<a href="#" class="btn btn-with-icon btn-outline-light rounded-0">
+						<i class="fab fa-twitter"></i>
+					</a href="#">
+					<a href="#" class="btn btn-with-icon btn-outline-light rounded-0">
+						<i class="fab fa-linkedin-in"></i>
+					</a href="#">
+					<a href="#" class="btn btn-with-icon btn-outline-light rounded-0">
+						<i class="fab fa-google"></i>
+					</a href="#">
+				</div>
+				<div class="col-md-4">
+					<h6 class="text-uppercase mb-3 mt-4 mt-md-0">About ActiveBox</h6>
+					<p class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, assumenda.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="container-fluid text-center py-4">
+	<div class="row">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<p class="text-muted">
+						Made with
+						<i class="fas fa-heart text-danger"></i> by
+						<a target="_blank" class="text-white" href="https://florin-pop.com">Florin Pop</a>
+						<br/> Copyright @
+						<a target="_blank" href="https://pixelbuddha.net/livepreview/activebox/index.html" class="text-white">ActiveBox</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
